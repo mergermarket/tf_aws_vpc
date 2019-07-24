@@ -6,9 +6,6 @@ output "database_subnets" {
   value = ["${aws_subnet.database.*.id}"]
 }
 
-output "database_subnet_group" {
-  value = "${aws_db_subnet_group.database.id}"
-}
 
 output "public_subnets" {
   value = ["${aws_subnet.public.*.id}"]
@@ -16,10 +13,6 @@ output "public_subnets" {
 
 output "elasticache_subnets" {
   value = ["${aws_subnet.elasticache.*.id}"]
-}
-
-output "elasticache_subnet_group" {
-  value = "${aws_elasticache_subnet_group.elasticache.id}"
 }
 
 output "vpc_id" {
